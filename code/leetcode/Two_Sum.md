@@ -20,4 +20,23 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-```   
+```
+### SOLUTION 2
+```{python}
+class Solution(object):
+    def twoSum(self, nums, target):
+        complements = {} # Create an empty dictionary
+        for i, num in enumerate(nums):
+            if num not in complements:
+                complements[target - num] = i # Store the complement and this index
+            else:
+                return [complements[num], i]    
+            print(complements)
+        return None # No solution found
+
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+```
