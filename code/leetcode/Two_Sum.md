@@ -31,7 +31,6 @@ class Solution(object):
                 complements[target - num] = i # Store the complement and this index
             else:
                 return [complements[num], i]    
-            print(complements)
         return None # No solution found
 
         """
